@@ -10,6 +10,9 @@ a {
 
 ul {
   list-style: none;
+}
+
+ul, img, h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
@@ -30,8 +33,6 @@ body {
   font-size: 72px;
   text-transform: uppercase;
   font-weight: 900;
-  padding: 0;
-  margin: 0;
   color: #fee6c6;
 }
 
@@ -56,6 +57,20 @@ body {
   background-color: #d97c0e;
   left: -80px;
   top: 25px;
+}
+
+.section-border {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.text {
+  color: #626262;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
 }
 
 /* ------------   main section   	  	 --------------- */
@@ -90,7 +105,7 @@ body {
 }
 
 .main-menu__link {
-  color: #393939;
+  color: #626262;
   font-size: 30px;
   font-weight: 300;
 }
@@ -238,7 +253,7 @@ body {
 .menu-button_active:hover .menu-button__line,
 .menu-button_active:hover .menu-button__line:before,
 .menu-button_active:hover .menu-button__line:after {
-  background-color: #393939;
+  background-color: #626262;
 }
 
 .menu-button_active .menu-button__line {
@@ -368,11 +383,6 @@ body {
   }
 }
 /* ------------   about_us   	  		 --------------- */
-.about-us {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-}
-
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -439,12 +449,6 @@ body {
   left: 0px;
 }
 
-.feature__text {
-  color: #393939;
-  line-height: 1.5;
-  font-size: 16px;
-}
-
 .feature:hover {
   background-color: #d97c0e;
 }
@@ -457,6 +461,61 @@ body {
 
 .feature:hover .feature__title:after {
   background-color: #fff;
+}
+
+/* ------------   quality   	  		 --------------- */
+.quality__wrap {
+  display: flex;
+}
+
+.quality__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding-left: 15px;
+}
+
+.quality__about {
+  padding-right: 100px;
+}
+
+.quality__text {
+  margin-bottom: 30px;
+}
+
+.achievements {
+  padding: 60px 90px 60px 150px;
+  background-color: #d97c0e;
+}
+
+.achievements__item {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.achievements__item:last-child {
+  margin-bottom: 0;
+}
+
+.achievements__item:before {
+  display: inline-block;
+  content: url(../img/icons/designer-acievement-1.png);
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: -50px;
+}
+
+.achievements__item:nth-child(2):before {
+  content: url(../img/icons/designer-acievement-2.png);
+}
+
+.achievements__item:nth-child(3):before {
+  content: url(../img/icons/designer-acievement-3.png);
+  left: -40px;
 }
 
 /*# sourceMappingURL=style.css.map */
