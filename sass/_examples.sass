@@ -1,0 +1,91 @@
+.slider
+	overflow: hidden
+	position: relative
+	padding-bottom: 120px
+.slides
+	padding: 15px
+	width: 400%
+	height: 100%
+	display: flex
+.slide
+	display: flex
+	width: 25%
+	transition: 0.4s
+	&__img
+		width: 55%
+		background-image: url(../img/examples/example-1.jpg)
+		height: 400px
+	&:nth-of-type(2) &__img
+		background-image: url(../img/examples/example-2.jpg)
+	&:nth-of-type(3) &__img
+		background-image: url(../img/examples/example-3.jpg)
+	&:nth-of-type(4) &__img
+		background-image: url(../img/examples/example-4.jpg)
+	&__info 
+		display: flex
+		flex-direction: column
+		width: 45%
+		padding: 30px
+	&__name
+		font-size: 38px
+		font-weight: 700
+		margin: 15px 0
+	&__city
+		font-size: 18px
+	&__text
+		margin: 25px 0
+.read-more
+	font-size: 18px
+	text-decoration: underline
+	color: $active
+.navigation
+	position: absolute
+	left: 50%
+	bottom: 80px
+	transform: translateX(-50%)
+	display: flex
+.dot
+	width: 15px
+	height: 15px
+	border: 2px solid $border-color
+	border-radius: 50%
+	margin: 10px
+	cursor: pointer
+	position: relative
+	&:after
+		display: inline-block
+		position: absolute
+		content: ''
+		height: 2px
+		width: 20px
+		background-color: $border-color
+		top: 50%
+		transform: translateY(-50%)
+		left: 13px
+	&:last-child
+		&:after
+			display: none
+input[name="r"]
+	position: absolute
+	visibility: hidden
+#r1:checked ~ .slide_1
+	margin-left: 0
+#r2:checked ~ .slide_1
+	margin-left: -25%
+#r3:checked ~ .slide_1
+	margin-left: -50%
+#r4:checked ~ .slide_1
+	margin-left: -75%
+
+#r1:checked ~ .navigation .dot-1
+	background-color: $active
+	border-color: $active
+#r2:checked ~ .navigation .dot-2
+	background-color: $active
+	border-color: $active
+#r3:checked ~ .navigation .dot-3
+	background-color: $active
+	border-color: $active
+#r4:checked ~ .navigation .dot-4
+	background-color: $active
+	border-color: $active
