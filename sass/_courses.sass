@@ -1,0 +1,100 @@
+.courses
+	&__section-header
+		text-align: center
+	&__section-description
+		margin-left: 15px
+		margin-top: 150px
+		&:before
+			left: 50%
+			top: -120px
+			height: 110px
+			width: 2px
+.cards
+	display: flex
+	flex-wrap: wrap
+	padding: 15px
+.card
+	width: 31%
+	background-color: $dark-bg
+	color: $white
+	box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.73)
+	transition: 0.4s
+	margin-right: 25px
+	margin-bottom: 35px
+	position: relative
+	&__img
+		height: 300px
+		background-image: url(../img/cards/card-1.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+	&:nth-child(2) &__img
+		background-image: url(../img/cards/card-2.jpg)
+	&:nth-child(3) &__img
+		background-image: url(../img/cards/card-3.jpg)
+	&:nth-child(4) &__img
+		background-image: url(../img/cards/card-4.jpg)
+	&:nth-child(5) &__img
+		background-image: url(../img/cards/card-5.jpg)
+	&:nth-child(6) &__img
+		background-image: url(../img/cards/card-6.jpg)
+	&__info
+		padding: 40px 30px
+		display: flex
+		flex-direction: column
+		min-height: 290px
+		justify-content: space-between
+	&__title
+		font-size: 24px
+		font-weight: 700
+		position: relative
+		&:hover
+			color: $active
+		&:after
+			display: inline-block
+			content: '01'
+			position: absolute	
+			color: rgba($border-color, 0.1)
+			font-size: 70px
+			font-weight: 700
+			left: 0
+			top: -30px
+	&:nth-child(2) &__title
+		&:after
+			content: '02'
+	&:nth-child(3) &__title
+		&:after
+			content: '03'
+	&:nth-child(4) &__title
+		&:after
+			content: '04'
+	&:nth-child(5) &__title
+		&:after
+			content: '05'
+	&:nth-child(6) &__title
+		&:after
+			content: '06'
+		&:before
+			display: inline-block
+			content: ''
+			position: absolute
+			height: 2px
+			width: 50px
+			bottom: -25px
+			background-color: $active
+	&:hover
+		box-shadow: 0px 0px 41px -2px rgba(0,0,0,0.73)
+	&__description
+		font-weight: 300
+		line-height: 1.5
+	&__more-info
+		font-size: 18px
+		font-weight: 700
+		margin-left: 40px
+		position: relative
+		&:hover
+			color: $active
+		&:before
+			display: inline-block
+			content: url(../img/icons/arrow_right.png)
+			position: absolute
+			left: -40px
