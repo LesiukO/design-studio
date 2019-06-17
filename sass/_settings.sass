@@ -9,26 +9,27 @@ body
 	text-transform: uppercase
 	font-weight: 900
 	color: $active-light
-.section-header
-	padding: 70px 15px 20px 
-.section-description
-	font-size: 42px
-	font-weight: 600
-	position: relative
-	margin: 15px
-	margin-left: 80px
-.section-description:before
-	content: ''
-	display: block
-	position: absolute
-	width: 70px
-	height: 2px
-	background-color: $active
-	left: -80px
-	top: 25px
-.section-border
-	border-left: 1px solid $border-color
-	border-right: 1px solid $border-color
+.section
+	&-header
+		padding: 70px 15px 20px 
+	&-description
+		font-size: 42px
+		font-weight: 600
+		position: relative
+		margin: 15px
+		margin-left: 80px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 70px
+			height: 2px
+			background-color: $active
+			left: -80px
+			top: 25px
+	&-border
+		border-left: 1px solid $border-color
+		border-right: 1px solid $border-color
 .text
 	color: $dark-text-color
 	line-height: 1.5
@@ -36,4 +37,14 @@ body
 	padding: 0
 	margin: 0
 	font-weight: 300
+.button
+	font-size: 18px
+	font-weight: 700
+	letter-spacing: 1px
+	display: inline-block
+	padding: 15px 40px
+	background-color: $active
+	transition: 0.3s
+	&:hover
+		background-color: $active-dark
 	
