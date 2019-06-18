@@ -87,14 +87,34 @@ body {
   text-decoration: underline;
 }
 
+.to-top {
+  background-color: #d97c0e;
+  width: 55px;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 50%;
+  box-shadow: 10px 10px 18px -14px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  z-index: 5;
+  transition: 0.4s;
+}
+.to-top_disabled {
+  display: none;
+  transition: 0.4s;
+}
+.to-top_active {
+  display: inline-block;
+  transition: 0.4s;
+}
+
 /* ------------   main section   	  	 --------------- */
 .main {
-  position: relative;
-  overflow: hidden;
   color: #fff;
 }
 .main-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 50%;
@@ -104,12 +124,13 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  transition: 0.5s;
-  transform: translateX(100%);
+  transition: 0.3s;
+  transform-origin: right;
+  transform: scaleX(0);
 }
 .main-menu_active {
-  transition: 0.5s;
-  transform: translateX(0%);
+  transition: 0.3s;
+  transform: none;
 }
 .main-menu__item {
   line-height: 2;
@@ -131,8 +152,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: space-between;
+  justify-content: center;
   padding: 30px;
+  margin: 0 auto;
 }
 .main__title {
   font-size: 72px;
@@ -144,6 +166,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 10px 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  transition: 0.4s;
+}
+.header_transparent {
+  background-color: transparent;
+}
+.header_colored {
+  background-color: #5f5f74;
 }
 .header__logo {
   margin-right: 60px;
@@ -199,10 +234,12 @@ body {
 }
 
 .menu-button {
+  display: inline-block;
   width: 50px;
-  line-height: 30px;
+  padding: 10px 0 20px;
   text-align: center;
-  z-index: 3;
+  vertical-align: middle;
+  z-index: 5;
 }
 .menu-button:hover {
   cursor: pointer;
@@ -243,8 +280,12 @@ body {
   border-radius: 5px;
   transition: 0.3s;
 }
+.menu-button_active {
+  background-color: #5f5f74;
+  border-radius: 50%;
+}
 .menu-button_active .menu-button__line, .menu-button_active .menu-button__line:before, .menu-button_active .menu-button__line:after, .menu-button_active:hover .menu-button__line, .menu-button_active:hover .menu-button__line:before, .menu-button_active:hover .menu-button__line:after {
-  background-color: #626262;
+  background-color: #ddd;
 }
 .menu-button_active .menu-button__line {
   height: 0;
@@ -288,11 +329,11 @@ body {
 
 .button-down {
   display: inline-block;
-  margin: 0 auto;
   width: 40px;
   height: 40px;
-  text-align: center;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
   animation: button-down-animated 3s linear infinite;
 }
 .button-down__line {
