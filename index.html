@@ -8,9 +8,6 @@
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="favicon.png" type="image/png">
 
-	<!-- fontawesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
 	<!-- normalize -->
 	<link rel="stylesheet" href="css/normalize.css">
 
@@ -36,17 +33,19 @@
 							<li class="nav__item"><a href="#contact" class="nav__link">Контакти</a></li>
 						</ul>
 					</nav>
-					<div class="phones">
-						<a href="phone:+123456789012" class="phone">+12 (345) 67 89 012</a>
-						<a href="phone:+123456789012" class="phone">+12 (345) 67 89 012</a>
+					<div class="header__right">
+						<div class="phones header__phones">
+							<a href="phone:+123456789012" class="phone">+12 (345) 67 89 012</a>
+							<a href="phone:+123456789012" class="phone">+12 (345) 67 89 012</a>
+						</div>
+						<span class="menu-button header__menu-button">
+							<span class="menu-button__line"></span>
+						</span>
 					</div>
-					<span class="menu-button">
-						<span class="menu-button__line"></span>
-					</span>
 				</div>
 				<div class="main-info">
 					<div class="main-info__left">
-						<h2 class="title main__title">Дизайн<br>для себе</h2>
+						<h2 class="title main__title">Дизайн<!-- <br> --> для себе</h2>
 						<p class="main-info__text">Новий набір 
 							<span class="main-info__text_active">з 15 червня 2019
 							</span>
@@ -125,7 +124,7 @@
 						<li class="achievements__item text">Более 100 реализованных проектов</li>
 					</ul>
 				</div>
-				<img src='img/woman.jpg' alt="" class="designer__photo">
+				<img src='img/woman.jpg' alt="" class="quality__author-img">
 			</div>
 		</div>
 	</section>
@@ -212,7 +211,7 @@
 					<input type="radio" name="r" id="r3">
 					<input type="radio" name="r" id="r4">
 					<div class="slide slide_1">
-						<div class="slide__img"></div>
+						<img src="/img/examples/example-1.jpg" class="slide__img" alt="example">
 						<div class="slide__info">
 							<a href="#" class="link">Читать все отзывы на facebook</a>
 							<span class="slide__name">Люба</span>
@@ -222,7 +221,7 @@
 						</div>
 					</div>
 					<div class="slide">
-						<div class="slide__img"></div>
+						<img src="/img/examples/example-2.jpg" class="slide__img" alt="example">
 						<div class="slide__info">
 							<a href="#" class="link">Читать все отзывы на facebook</a>
 							<span class="slide__name">Анна</span>
@@ -232,7 +231,7 @@
 						</div>
 					</div>
 					<div class="slide">
-						<div class="slide__img"></div>
+						<img src="/img/examples/example-3.jpg" class="slide__img" alt="example">
 						<div class="slide__info">
 							<a href="#" class="link">Читать все отзывы на facebook</a>
 							<span class="slide__name">Людмила</span>
@@ -242,7 +241,7 @@
 						</div>
 					</div>
 					<div class="slide">
-						<div class="slide__img"></div>
+						<img src="/img/examples/example-4.jpg" class="slide__img" alt="example">
 						<div class="slide__info">
 							<a href="#" class="link">Читать все отзывы на facebook</a>
 							<span class="slide__name">Андрей</span>

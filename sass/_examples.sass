@@ -3,24 +3,16 @@
 	position: relative
 	padding-bottom: 120px
 .slides
-	padding: 15px
 	width: 400%
 	height: 100%
 	display: flex
 .slide
 	display: flex
 	width: 25%
+	padding: 15px
 	transition: 0.4s
 	&__img
 		width: 55%
-		background-image: url(../img/examples/example-1.jpg)
-		height: 400px
-	&:nth-of-type(2) &__img
-		background-image: url(../img/examples/example-2.jpg)
-	&:nth-of-type(3) &__img
-		background-image: url(../img/examples/example-3.jpg)
-	&:nth-of-type(4) &__img
-		background-image: url(../img/examples/example-4.jpg)
 	&__info 
 		display: flex
 		flex-direction: column
@@ -89,3 +81,10 @@ input[name="r"]
 #r4:checked ~ .navigation .dot-4
 	background-color: $active
 	border-color: $active
+@media (max-width: 1000px)
+	.slide
+		flex-direction: column
+		&__img
+			width: 100%
+		&__info
+			width: 100%

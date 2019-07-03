@@ -12,21 +12,21 @@
 .cards
 	display: flex
 	flex-wrap: wrap
-	padding: 15px
+	padding: 0 15px
 .card
 	width: 31%
 	background-color: $dark-bg
 	color: $white
 	box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.73)
 	transition: 0.4s
-	margin-right: 25px
-	margin-bottom: 35px
+	margin: 10px
 	position: relative
 	&__img
 		height: 300px
 		background-image: url(../img/cards/card-1.jpg)
 		background-repeat: no-repeat
 		background-size: cover
+		background-position: center
 	&:nth-child(2) &__img
 		background-image: url(../img/cards/card-2.jpg)
 	&:nth-child(3) &__img
@@ -58,6 +58,14 @@
 			font-weight: 700
 			left: 0
 			top: -30px
+		&:before
+			display: inline-block
+			content: ''
+			position: absolute
+			height: 2px
+			width: 50px
+			bottom: -25px
+			background-color: $active
 	&:nth-child(2) &__title
 		&:after
 			content: '02'
@@ -73,14 +81,6 @@
 	&:nth-child(6) &__title
 		&:after
 			content: '06'
-		&:before
-			display: inline-block
-			content: ''
-			position: absolute
-			height: 2px
-			width: 50px
-			bottom: -25px
-			background-color: $active
 	&:hover
 		box-shadow: 0px 0px 41px -2px rgba(0,0,0,0.73)
 	&__description
@@ -98,3 +98,16 @@
 			content: url(../img/icons/arrow_right.png)
 			position: absolute
 			left: -40px
+@media (max-width: 1270px)
+	.card
+		width: 45%
+@media (max-width: 760px)
+	.card
+		width: 100%
+	.card__info
+		min-height: 240px
+@media (max-width: 450px)
+	.card
+		&__title
+			&:before
+				display: none

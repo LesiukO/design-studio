@@ -1,16 +1,18 @@
 .quality
 	&__wrap
 		display: flex
+		padding: 0 15px
 	&__info
 		display: flex
 		flex-direction: column
 		justify-content: space-between
 		width: 50%
-		padding-left: 15px
 	&__about
 		padding-right: 100px
 	&__text
 		margin-bottom: 30px
+	&__author-img
+		max-width: 50%
 .achievements
 	padding: 60px 90px 60px 150px
 	background-color: $active
@@ -35,3 +37,24 @@
 			&:before
 				content: url(../img/icons/designer-acievement-3.png)
 				left: -40px
+@media (max-width: 1270px)
+	.quality
+		&__about
+			padding-right: 0
+@media (max-width: 1000px)
+	.quality
+		&__wrap
+			flex-direction: column
+		&__info
+			width: 100%
+@media (max-width: 760px)
+	.quality
+		&__author-img
+			max-width: 80%
+			align-self: center
+@media (max-width: 600px)
+	.quality
+		&__author-img
+			max-width: 100%
+	.achievements
+		padding: 35px 25px 35px 70px

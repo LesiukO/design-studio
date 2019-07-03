@@ -2,6 +2,7 @@
 	color: $white
 	&__top
 		background-color: $dark-bg
+		padding: 15px
 	&__wrap
 		display: flex
 		justify-content: space-between
@@ -14,3 +15,10 @@
 	font-weight: 300
 	text-align: center
 	padding: 20px 0
+@media (max-width: 760px)
+	.footer
+		&__wrap
+			flex-direction: column
+			align-items: center
+		&__socials
+			margin: 20px

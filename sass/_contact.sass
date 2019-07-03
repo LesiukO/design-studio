@@ -7,6 +7,7 @@
 		text-align: center
 		color: $white
 		margin-bottom: 60px
+		font-size: 72px
 .contact-form
 	max-width: 970px
 	background-color: $white
@@ -42,3 +43,19 @@
 		color: $active
 		font-weight: 700
 		outline: 0
+@media (max-width: 1000px)
+	.contact
+		&__title
+			font-size: 50px
+	.form
+		flex-direction: column
+		align-items: center
+		&__input, &__submit
+			width: 300px
+			margin-bottom: 15px
+@media (max-width: 450px)
+	.contact
+		&__title
+			font-size: 32px
+	.contact-form
+		padding: 15px
