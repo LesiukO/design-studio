@@ -67,5 +67,5 @@ window.onload = function () {
 			buttonToTop.classList.add("to-top_disabled");
 			buttonToTop.classList.remove("to-top_active");
 		}
-	})
+	});
 }
